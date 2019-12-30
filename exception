@@ -1,0 +1,55 @@
+package deloitte;
+
+ import java.util.Scanner;
+
+public class name_validate {
+	private String first_name;
+	 private String last_name;
+	 private String full_name;
+	 Scanner sc;
+char []data;
+
+
+	public void name_validate(String first_name, String last_name, String full_name){
+		this.first_name=first_name;
+		this.last_name=last_name;
+		this.full_name=full_name;
+		sc=new Scanner(System.in);
+	}
+	public void addName() throws Exception
+	{
+		System.out.println("enter the full name");
+		full_name=sc.next();
+		System.out.println("enter the last name");
+		last_name=sc.next();
+		System.out.println("enter the first name");
+		first_name=sc.next();
+		if(first_name.isEmpty() || last_name.isEmpty())
+			throw new Exception();
+		else
+			System.out.println("name is characterised");
+	}
+}
+	 public class Myexception Extends Exception
+	 
+	 {
+	 
+		public void main(String args[])
+		{
+		name_validate n1=new name_validate();
+		try{
+			n1.addName();
+			
+		}
+		catch(java.lang.Exception e){
+			System.out.println("error occured");
+			e.printStackTrace();
+		}
+		
+		}
+		
+	}
+
+
+
+
